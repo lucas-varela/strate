@@ -42,7 +42,7 @@ export type RouteHandler<M extends Middleware = Middleware, C extends Middleware
     context: ContextObject
         & Omit<UnionToIntersection<M>, keyof Middleware>
         & Omit<UnionToIntersection<C>, keyof Middleware>
-) => Promise<void>
+) => any
 
 type ConsoleHelper = (message: string) => void
 
