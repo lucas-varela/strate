@@ -2,9 +2,11 @@
   "name": "strate",
   "version": "0.1.1",
   "description": "A simple framework for Next.js APIs",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -17,9 +19,25 @@
     "framework"
   ],
   "author": "Lucas Varela",
-  "license": "AGPL-3.0-only",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kiwiki/strate/issues"
   },
-  "homepage": "https://github.com/kiwiki/strate#readme"
+  "homepage": "https://github.com/kiwiki/strate#readme",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "dependency-graph": "^0.9.0",
+    "yup": "^0.29.0",
+    "next": "^9.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.11",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.4",
+    "@types/webpack": "^4.41.17",
+    "@types/yup": "^0.29.0",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.3"
+  },
+  "files": ["lib/**/*"]
 }

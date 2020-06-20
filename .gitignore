@@ -11,3 +11,6 @@ node_modules/
 
 # JetBrains files
 .idea
+
+# Dist files
+/lib
