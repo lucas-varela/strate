@@ -1,6 +1,6 @@
 {
   "name": "strate",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A simple framework for Next.js APIs",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -39,5 +39,7 @@
     "tslint": "^6.1.2",
     "typescript": "^3.9.3"
   },
-  "files": ["lib/**/*"]
+  "files": [
+    "lib/**/*"
+  ]
 }
