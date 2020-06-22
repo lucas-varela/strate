@@ -132,9 +132,10 @@ export default class Prisma {
 
 You don't need to worry about middleware ordering. Dependencies are placed in a dependency graph that resolves the right
 order to execute your registered middleware. After your route code is handled, all of your middleware run again in
-reverse order (after "await next()"), so you have a chance to clean up or close database connections, for instance.
+reverse order (**after** "await next()"), so you have a chance to clean up resources or close database connections, 
+for instance.
 
-And that's the gist of it. For advance use cases, read the documentation below.
+And that's the gist of it. For advanced use cases, read the documentation below.
 
 **This package is still in development!** It is not ready for production yet. Feel free to test it and contribute.
 
