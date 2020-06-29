@@ -5,8 +5,6 @@
     A fast and simple Next.js API framework.
 </p>
 
-<!-- A batteries-included framework for Next.js APIs. -->
-
 Strate is a framework for Next.js API routes. It stays out of your way by providing a simple, yet highly customizable 
 middleware-based architecture. It features:
 
@@ -14,6 +12,8 @@ middleware-based architecture. It features:
 - Automatic middleware order resolution based on their dependencies
 - Support for both sync and async routes
 - A set of useful middleware out of the box
+
+Strate also works on Vercel API routes, since it shares the same features as Next.js' API routes.
 
 # Getting started
 Install Strate via npm or yarn:
@@ -29,7 +29,7 @@ npm install strate
 Strate builds upon Next.js' file-based routing, and help you keep your code DRY by reusing common logic as middleware on 
 your routes. 
 
-You can start by creating simple routes using Strate's Route function:
+You can start by creating simple routes using `Route`:
 
 ```js
 // pages/api/users.js
@@ -46,7 +46,7 @@ export default Route(async (request, response, context) => {
 })
 ```
 
-Then, reuse code by creating a custom Route function with common configuration:
+Need to share functionality between routes? Reuse code by creating a custom Route function with common configuration:
 
 ```js
 // pages/api/_src/route.js
@@ -107,7 +107,7 @@ export default class Prisma {
      */
     prisma
 
-    // Although this middleware doesn't really uses the ErrorHandler middleware,
+    // Although our middleware doesn't really uses the ErrorHandler middleware,
     // this is how you define dependencies. Strate automatically resolves them.
     static dependencies = [ ErrorHandler ]
 
@@ -137,9 +137,12 @@ for instance.
 
 And that's the gist of it. For advanced use cases, read the documentation below.
 
-**This package is still in development!** It is not ready for production yet. Feel free to test it and contribute.
+**This package is still in development!** It is not ready for production yet. However, Feel free to test it and 
+contribute.
 
 # Documentation
+You can check the full documentation on the `docs` folder of this repository. Or simply [click here](./docs/readme.md).
+
 ## makeRoute
 ### one-time middleware
 
